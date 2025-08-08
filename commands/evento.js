@@ -1,9 +1,9 @@
-const { SlashCommandBuilder, ChannelType, PermissionFlagsBits } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('evento')
-        .setDescription('Cria um evento no servidor')
+        .setDescription('Cria um evento no servidor.')
         .addStringOption(option =>
             option.setName('nome')
                 .setDescription('Nome do evento')
@@ -14,7 +14,7 @@ module.exports = {
                 .setRequired(true))
         .addStringOption(option =>
             option.setName('data')
-                .setDescription('Data e hora (ex: 2025-08-15T18:00:00)')
+                .setDescription('Data e hora no formato YYYY-MM-DDTHH:MM:SS')
                 .setRequired(true))
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
