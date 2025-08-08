@@ -12,7 +12,12 @@ module.exports = {
 
     async execute(interaction) {
         const mensagem = interaction.options.getString('mensagem');
-        await interaction.reply(`📢 **Aviso:** @everyone ${mensagem}`);
+        await interaction.reply({
+            content: `@everyone 📢 **Aviso:** ${mensagem}`,
+            allowedMentions: { parse: ['everyone'] }
+});
+
     }
 };
+
 
