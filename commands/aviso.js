@@ -12,6 +12,6 @@ module.exports = {
 
     async execute(interaction) {
         const mensagem = interaction.options.getString('mensagem');
-        await interaction.reply({ content: `📢 Aviso: ${mensagem}`, allowedMentions: { parse: [] } });
+        await interaction.reply(`📢 **Aviso:** ${mensagem}`);
     }
 };
