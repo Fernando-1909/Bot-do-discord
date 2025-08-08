@@ -15,9 +15,10 @@ module.exports = {
         await interaction.reply({
             content: `@everyone 📢 **Aviso:** ${mensagem}`,
             allowedMentions: { parse: ['everyone'] }
-});
+        });
 
     }
 };
+
 
 
